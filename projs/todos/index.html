@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+    <h1>To Dos:</h1>
+    <button onclick="onAddTodo()">Add Todo</button>
+    <section class="sort-container">
+        <h2>Sort By:</h2>
+        <p class="list-item-counter">F</p>
+        <button class="sort-btn" onclick="onSetSort(this.value)" value="no-sort">No Sort</button>
+        <button class="sort-btn" onclick="onSetSort(this.value)" value="txt">By Text</button>
+        <button class="sort-btn" onclick="onSetSort(this.value)" value="date">By Date</button>
+        <button class="sort-btn" onclick="onSetSort(this.value)" value="importance">By Importance</button>
+        <button class="sort-btn" onclick="onSetSort(this.value)" value="active">By Active Todos</button>
+        <button class="sort-btn" onclick="onSetSort(this.value)" value="done">By Done Todos</button>
+    </section>
+    <ul class="todo-list">
+
+    </ul>
+    <script src="js/todo-controller.js"></script>
+    <script src="js/todo-service.js"></script>
+    <script src="js/todo-util-service.js"></script>
+</body>
+
+</html>

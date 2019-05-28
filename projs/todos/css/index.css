@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: inline-block;
+    padding: 20px;
+    background-color: rgb(20, 212, 62);
+    color: white;
+}
+
+.sort-container {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sort-btn {
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+}
+
+.sort-btn.selected {
+    border: 1px solid navy;
+}
+
+.todo-list {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.todo-list>li {
+    margin-top: 10px;
+}
+
+.todo-date {
+    font-size: 0.5em;
+}
+
+.todo-importance {
+    font-size: 0.5em;
+}
+
+.done {
+    text-decoration: line-through;
+}
