@@ -1,15 +1,15 @@
 'use strict';
-const UNCLICKEDCELL = '<img src="/img/unclickedcell.png"/>';
-const ANTICIPATEDCELL = '<img src="/img/anticipatedcell.png"/>';
-const ANTICIPATEDSMILEY = '<img src="/img/anticipatedsmiley.png"/>';
-const FLAGGED = '<img src="/img/flagcell.png"/>';
-const CLICKEDMINE = '<img src="/img/clickedmine.png"/>';
-const MINE = '<img src="/img/mine.png"/>';
-const SMILEYDEFAULT = '<img src="/img/smileydefault.png"/>';
-const SMILEYDEAD = '<img src="/img/smileydead.png"/>';
-const SMILEYVICTORY = '<img src="/img/smileyvictory.png"/>';
-const LIGHTBULBON = '<img src="/img/lightbulbon.png"/>';
-const LIGHTBULBOFF = '<img src="/img/lightbulboff.png"/>';
+const UNCLICKEDCELL = '<img src="./img/unclickedcell.png"/>';
+const ANTICIPATEDCELL = '<img src="./img/anticipatedcell.png"/>';
+const ANTICIPATEDSMILEY = '<img src="./img/anticipatedsmiley.png"/>';
+const FLAGGED = '<img src="./img/flagcell.png"/>';
+const CLICKEDMINE = '<img src="./img/clickedmine.png"/>';
+const MINE = '<img src="./img/mine.png"/>';
+const SMILEYDEFAULT = '<img src="./img/smileydefault.png"/>';
+const SMILEYDEAD = '<img src="./img/smileydead.png"/>';
+const SMILEYVICTORY = '<img src="./img/smileyvictory.png"/>';
+const LIGHTBULBON = '<img src="./img/lightbulbon.png"/>';
+const LIGHTBULBOFF = '<img src="./img/lightbulboff.png"/>';
 
 
 function renderBoard(mat, selector) {
@@ -181,7 +181,7 @@ function flipHintedCellsBack(mat) {
 
 function updateBestTime(mat) {
     if (mat.length === 4) {
-        if (+localStorage.bestTimeEasy > gGameTime.time) {
+        if (+localStorage.bestTimeEasy > gGameTime.time || !localStorage.bestTimeEasy) {
             var usernameInput = prompt('Congratulations on the new best time!' + 
             ' Write the username you want to be displayed by.');
             localStorage.setItem('bestTimeEasyUsername', usernameInput);
@@ -189,7 +189,7 @@ function updateBestTime(mat) {
         }
     }
     else if (mat.length === 8) {
-        if (+localStorage.bestTimeMedium > gGameTime.time) {
+        if (+localStorage.bestTimeMedium > gGameTime.time|| !localStorage.bestTimeMedium) {
             var usernameInput = prompt('Congratulations on the new best time!' + 
             ' Write the username you want to be displayed by.');
             localStorage.setItem('bestTimeMediumUsername', usernameInput);
@@ -197,7 +197,7 @@ function updateBestTime(mat) {
         }
     }
     else if (mat.length === 12) {
-        if (+localStorage.bestTimeHard > gGameTime.time) {
+        if (+localStorage.bestTimeHard > gGameTime.time || !localStorage.bestTimeHard) {
             var usernameInput = prompt('Congratulations on the new best time!' + 
             ' Write the username you want to be displayed by.');
             localStorage.setItem('bestTimeHardUsername', usernameInput);

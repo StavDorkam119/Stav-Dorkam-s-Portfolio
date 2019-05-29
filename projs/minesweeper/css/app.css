@@ -1,5 +1,5 @@
 html {
-  background: url('/img/background-image1.jpg') no-repeat center center fixed;
+  background: url('../img/background-image1.jpg') no-repeat center center fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,7 +78,7 @@ header h3{
   margin: 10px auto;
   padding: 10px;
   border-radius: 10px;
-  background-image: url("/img/game-info-background.png");
+  background-image: url("../img/game-info-background.png");
   background-repeat: no-repeat, repeat;
   background-size: cover;
 }
